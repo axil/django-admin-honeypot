@@ -8,14 +8,13 @@ from django.template import RequestContext
 from django.utils.translation import ugettext as _
 
 def admin_honeypot(request, extra_context=None):
-    path = request.get_full_path()
-    if not path.endswith('/'):
-        return redirect(path + '/', permanent=True)
+    if not request.path.endswith('/'):
+        return redirect(request.path + '/', permanent=True)
 
     context = {
-        'app_path': path,
+        'app_path': request.get_full_path(),
         'form': HoneypotLoginForm(request, request.POST or None),
-        REDIRECT_FIELD_NAME: path,
+        REDIRECT_FIELD_NAME: request.get_full_path(),
         'site': Site.objects.get_current(),
         'title': _('Log in'),
         }
