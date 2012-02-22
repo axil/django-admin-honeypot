@@ -1,6 +1,6 @@
-from admin_honeypot.forms import HoneypotLoginForm
-from admin_honeypot.models import LoginAttempt
-from admin_honeypot.signals import honeypot
+from .forms import HoneypotLoginForm
+from .models import LoginAttempt
+from .signals import honeypot
 from django.contrib.auth import REDIRECT_FIELD_NAME
 from django.contrib.sites.models import Site
 from django.shortcuts import render_to_response, redirect

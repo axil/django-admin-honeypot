@@ -1,4 +1,4 @@
-from admin_honeypot.models import LoginAttempt
+from .models import LoginAttempt
 from django.conf import settings
 from django.core import mail
 from django.core.urlresolvers import reverse

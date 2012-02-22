@@ -1,5 +1,5 @@
 from django.contrib import admin
-from admin_honeypot.models import LoginAttempt
+from .models import LoginAttempt
 
 class LoginAttemptAdmin(admin.ModelAdmin):
     list_display = ('username', 'get_ip_address', 'get_session_key', 'timestamp')

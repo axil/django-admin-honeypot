@@ -1,4 +1,4 @@
-from admin_honeypot.signals import honeypot
+from .signals import honeypot
 from django.conf import settings
 from django.contrib.sites.models import get_current_site
 from django.core.exceptions import ImproperlyConfigured
