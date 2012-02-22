@@ -17,6 +17,7 @@ def admin_honeypot(request, extra_context=None):
         REDIRECT_FIELD_NAME: request.get_full_path(),
         'site': Site.objects.get_current(),
         'title': _('Log in'),
+        'fake_admin': True,
         }
     context['form'].is_valid()
     context.update(extra_context or {})
