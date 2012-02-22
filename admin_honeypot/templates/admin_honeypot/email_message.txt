@@ -3,7 +3,7 @@ admin honeypot on {{ site.name }} from the following IP address:
 
     {{ instance.ip_address }}
 
-http://{{ site.domain }}{% url admin:admin_honeypot_loginattempt_change instance.pk %}
+http://{{ site.domain }}{{ url }}
 
 ----
 django-admin-honeypot

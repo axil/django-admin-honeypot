@@ -1,5 +1,6 @@
 from django.conf.urls.defaults import patterns, include, url
+from . import views
 
-urlpatterns = patterns('admin_honeypot.views',
-    url(r'^.*$', 'admin_honeypot', name='admin_honeypot'),
+urlpatterns = patterns('',
+    url(r'^.*$', views.admin_honeypot, name='admin_honeypot'),
 )
